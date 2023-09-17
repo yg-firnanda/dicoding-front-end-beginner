@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Shelf Book Submission</title>
+</head>
+<body>
+    <h1 class="bg-primary text-center my-2 w-100 text-white mb-5">Bookself API</h1>
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-sm-12 col-md-6">
+                <div class="bg-white border border-primary rounded p-3">
+                    <h2>Add Book Data</h2>
+                    <form onsubmit="addBook(event)">
+                        <div class="form-floating mb-3">
+                            <input type="text" id="title" class="form-control" required>
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" id="author" class="form-control" required>
+                            <label for="author">Writter:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" id="year" class="form-control" required>
+                            <label for="year">Year</label>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" id="isFinishRead">
+                            <label for="isFinishRead">Finish Read</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="bg-white border border-primary rounded p-3">
+                    <div id="unFinishedRead">
+                        <h4 class="fw-bold text-danger">Unfinished Read</h4>
+                    </div>
+                    <div id="finishRead">
+                        <h4 class="fw-bold text-success">Finished Read</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</body>
+</html>
